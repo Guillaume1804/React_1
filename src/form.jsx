@@ -1,13 +1,9 @@
 import { useState } from "react";
 import AddInput from "./input";
 
-// // TODO Faire fonction permettant d'enregitrer un nouveau USER 
 
 function AddForm({setUsers , users , setShowForm}) {
-
-    // Valeurs des inputs pour l'envoie
-    // const [inputValues, setInputValues] = useState([]);
-
+    
     // Récupération des valeurs des inputs de l'enfant
     const [inputValue1, setInputValue1] = useState("");
     const [inputValue2, setInputValue2] = useState("");

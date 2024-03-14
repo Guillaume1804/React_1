@@ -12,6 +12,13 @@ function App() {
 
   ]);
 
+
+  // TODO : Faire un systéme permettant de mettre à jour un élément de la liste
+  const update = (index) => {
+    const updateUser = users.filter((_, userIndex) => userIndex ===index);
+    console.log(updateUser);
+  }
+
   const deleteTask = (index) => {
     const newUsers = users.filter((_, userIndex) => userIndex !==index);
     setUsers(newUsers);
@@ -29,6 +36,7 @@ function App() {
               age={user.age}
               profession={user.profession}
             />
+            <button onClick={() => update(index)}>Update</button>
             <button key={`boutton ${index}`} onClick={() => deleteTask(index)}>Supprimer</button>
           </div>
         ))}
