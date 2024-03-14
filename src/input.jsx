@@ -3,10 +3,12 @@ import { useState } from "react";
 function AddInput(props) {
     const [InputValue, setInputValue]= useState("");
 
+    
     const changeValue = (e) => {
         setInputValue(e.target.value)
+        props.onDataChange(e.target.value)
     }
-
+    
     return (
         <div>
             <label htmlFor={props.id}>Votre {props.name}</label>

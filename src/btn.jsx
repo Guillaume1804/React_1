@@ -1,7 +1,7 @@
 import { useState } from "react";
 import AddForm from "./form";
 
-function Button() {
+function Button({setUsers , users}) {
     const [showForm, setShowForm] = useState(false);
 
     const clicked = () => {
@@ -13,7 +13,7 @@ function Button() {
     return (
         <div>
             <p>Add User <button onClick={clicked}>{symbole}</button></p>
-            {showForm && <AddForm/>}
+            {showForm && <AddForm setUsers={setUsers} users={users} setShowForm={setShowForm}/>}
         </div>
     )
 }

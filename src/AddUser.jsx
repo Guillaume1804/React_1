@@ -1,4 +1,4 @@
-// ANCHOR fonctio pour jouter un nouveau USER
+// ANCHOR fonction pour jouter un nouveau USER
 
 function AddUser() {
 
